@@ -1,0 +1,76 @@
+:root {
+  color-scheme: light dark;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #f5f6fa;
+  color: #172033;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    background: #151821;
+    color: #eef1fa;
+  }
+}
+
+body {
+  min-width: 16rem;
+  min-height: 100vh;
+  margin: 0;
+  display: grid;
+  place-items: center;
+}
+
+main {
+  box-sizing: border-box;
+  width: min(100% - 2rem, 34rem);
+  padding: 2.5rem;
+  border: 1px solid color-mix(in srgb, currentColor 12%, transparent);
+  border-radius: 1.25rem;
+  background: color-mix(in srgb, currentColor 4%, transparent);
+}
+
+.eyebrow {
+  color: #5865d8;
+  font-size: .75rem;
+  font-weight: 750;
+  letter-spacing: .12em;
+}
+
+h1 {
+  margin: 1rem 0 .75rem;
+  font-size: clamp(1.6rem, 7vw, 2.2rem);
+  line-height: 1.15;
+}
+
+#message,
+.note {
+  line-height: 1.6;
+}
+
+.note {
+  margin-top: 2rem;
+  color: color-mix(in srgb, currentColor 68%, transparent);
+  font-size: .88rem;
+}
+
+.button {
+  display: inline-flex;
+  margin-top: 1rem;
+  padding: .85rem 1.2rem;
+  border-radius: .7rem;
+  background: #5865d8;
+  color: white;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.button:focus-visible {
+  outline: 3px solid currentColor;
+  outline-offset: 3px;
+}
+
+[hidden] {
+  display: none;
+}
